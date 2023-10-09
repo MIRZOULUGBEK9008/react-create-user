@@ -1,0 +1,128 @@
+/* CUSTOM-PROPS */
+:root {
+  /* COLORS */
+  --black_1: #000;
+  --black_2: #333;
+
+  --white: #fff;
+  --gray: #eee9e9;
+  --sky-blue: #b0daff;
+  --tipa-peach: #57375d;
+
+  /* SHADOWS */
+  --card-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+  /* ANIMATIONS-SEC  */
+  --as: 0.3s;
+}
+
+/* FONT-FACE  */
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../../public/fonts/SourceCodePro-Light.woff2") format("woff2"),
+    url("../../public/fonts/SourceCodePro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../../public/fonts/SourceCodePro-SemiBold.woff2") format("woff2"),
+    url("../../public/fonts/SourceCodePro-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../../public/fonts/SourceCodePro-Regular.woff2") format("woff2"),
+    url("../../public/fonts/SourceCodePro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* GLOBAL-STYLES  */
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* CHROME, SAFARI, EDGE, OPERA */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  --moz-appearance: textfield;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  user-select: none;
+}
+
+body {
+  height: 100%;
+  background-color: var(--white);
+  color: var(--black_1);
+  font-family: "Source Code Pro", "Arial", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* FOCUS-STYLES  */
+*:focus {
+  outline: 0.3rem dashed var(--black_2);
+  outline-offset: 0.3rem;
+}
+
+/* CONTAINER  */
+.container {
+  max-width: 120rem;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* VISUALLY-HIDDEN  */
+.visually-hidden {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  margin: -0.1rem;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* MAIN-CONTENT  */
+.main-content {
+  flex-grow: 1;
+}

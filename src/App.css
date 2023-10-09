@@ -1,0 +1,84 @@
+.users {
+  display: grid;
+  justify-tracks: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 4rem 0;
+}
+
+.users__card {
+  box-shadow: var(--card-shadow);
+  border-radius: 5px;
+  padding: 1.5rem;
+  transition: transform var(--as) ease;
+}
+
+.users__card:hover {
+  transform: rotate(-3deg);
+}
+
+.card__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__term-detail {
+  display: flex;
+  align-items: center;
+}
+
+.info__term-detail:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.info__term {
+  font-weight: 400;
+}
+
+.info__detail {
+  font-weight: 300;
+  margin-left: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card__button {
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--black_2);
+  color: var(--white);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: opacity var(--as) ease, transform var(--as) ease;
+}
+
+.card__button:hover {
+  opacity: 0.8;
+}
+
+.card__button:active {
+  transform: scale(0.9);
+}
